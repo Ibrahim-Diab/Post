@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>678965439354-d1a5i00kmtqudf6rrnjj2tdncu259tcm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.678965439354-d1a5i00kmtqudf6rrnjj2tdncu259tcm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAe5epJKAnETIR2Ot7g2GdHNUqimkRkUOA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>678965439354</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>deepo.com.Post</string>
+	<key>PROJECT_ID</key>
+	<string>saveit633</string>
+	<key>STORAGE_BUCKET</key>
+	<string>saveit633.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:678965439354:ios:21d032050af2f45eed44c3</string>
+</dict>
+</plist>
