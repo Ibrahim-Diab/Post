@@ -10,12 +10,12 @@
         <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVc" customModule="Post" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVc" id="BYZ-38-t0r" customClass="HomeVc" customModule="Post" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dYc-hh-ARW">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dYc-hh-ARW">
                                 <rect key="frame" x="15" y="108" width="384" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UjW-JK-4LT"/>
@@ -27,17 +27,44 @@
                                     <segment title="Popular"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segement:" destination="BYZ-38-t0r" eventType="valueChanged" id="cvR-ic-geQ"/>
+                                </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baN-16-8AQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="141" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baN-16-8AQ">
                                 <rect key="frame" x="0.0" y="163" width="414" height="699"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="R0O-Xa-0lU">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R0O-Xa-0lU" id="iA7-KY-Kar">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dYc-hh-ARW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="CwK-sJ-ahe"/>
+                            <constraint firstItem="dYc-hh-ARW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EP7-T9-mi3"/>
+                            <constraint firstItem="baN-16-8AQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FCS-Zo-PdE"/>
+                            <constraint firstItem="baN-16-8AQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W1i-4a-b7E"/>
+                            <constraint firstItem="baN-16-8AQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y8f-E0-tJg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dYc-hh-ARW" secondAttribute="trailing" constant="15" id="c8N-nM-XKg"/>
+                            <constraint firstItem="baN-16-8AQ" firstAttribute="top" secondItem="dYc-hh-ARW" secondAttribute="bottom" constant="15" id="lgu-S2-2mX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="Hle-LM-i7H">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="8W6-IX-3Rq">
+                            <connections>
+                                <action selector="signout:" destination="BYZ-38-t0r" id="dUH-Ue-371"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="addThoughtIcon" id="Jq7-hD-p3b">
                             <color key="tintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -52,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105.7971014492755" y="67.633928571428569"/>
+            <point key="canvasLocation" x="909" y="14"/>
         </scene>
         <!--Createpost-->
         <scene sceneID="vyq-WR-1CG">
@@ -138,12 +165,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghT-71-0AQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="73"/>
+            <point key="canvasLocation" x="1801" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="849-iQ-CFb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yKV-7e-gCj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="yKV-7e-gCj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rgw-Yf-ZZN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -164,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXK-4X-lBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="72.991071428571431"/>
+            <point key="canvasLocation" x="174" y="17"/>
         </scene>
     </scenes>
     <resources>

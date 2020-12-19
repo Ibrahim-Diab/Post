@@ -212,12 +212,20 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Firebase/Auth (7.1.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 7.1.0)
   - Firebase/Core (7.1.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 7.1.0)
@@ -235,6 +243,11 @@ PODS:
     - GoogleUtilities/Network (~> 7.0)
     - "GoogleUtilities/NSData+zlib (~> 7.0)"
     - nanopb (~> 2.30906.0)
+  - FirebaseAuth (7.1.0):
+    - FirebaseCore (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GTMSessionFetcher/Core (~> 1.4)
   - FirebaseCore (7.1.0):
     - FirebaseCoreDiagnostics (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -269,6 +282,10 @@ PODS:
     - nanopb (~> 2.30906.0)
   - GoogleDataTransport (8.0.1):
     - nanopb (~> 2.30906.0)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.1.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -312,6 +329,14 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
+  - GTMAppAuth (1.1.0):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher (~> 1.4)
+  - GTMSessionFetcher (1.5.0):
+    - GTMSessionFetcher/Full (= 1.5.0)
+  - GTMSessionFetcher/Core (1.5.0)
+  - GTMSessionFetcher/Full (1.5.0):
+    - GTMSessionFetcher/Core (= 1.5.0)
   - leveldb-library (1.22)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -321,46 +346,58 @@ PODS:
   - PromisesObjC (1.2.11)
 
 DEPENDENCIES:
+  - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - GoogleSignIn
 
 SPEC REPOS:
   trunk:
     - abseil
+    - AppAuth
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - GTMAppAuth
+    - GTMSessionFetcher
     - leveldb-library
     - nanopb
     - PromisesObjC
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
   FirebaseAnalytics: 7f165a56dea86ddd5b8ce02af3bee982c683405c
+  FirebaseAuth: f82c2cfcc1c107bb0a97735cdbce4eb2a601f710
   FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
   FirebaseCoreDiagnostics: 872cdb9b749b23346dddd5c1014d1babd2257de3
   FirebaseFirestore: bbf303f0638a93e6ecb38433aad283cebdfece5f
   FirebaseInstallations: 3de38553e86171b5f81d83cdeef63473d37bfdb0
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
+  GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: cc134a1f24453569f4c3676b5e83af8a6fb3161a
+PODFILE CHECKSUM: f96f65ce517f668a89852645d32057412ec6e02a
 
 COCOAPODS: 1.10.0

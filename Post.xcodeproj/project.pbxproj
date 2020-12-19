@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		43A0F07E63155001B70C6403 /* Pods_Post.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FD36E8AD700DAAEFFBC5F7 /* Pods_Post.framework */; };
+		F4562B72258876BD00022011 /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4562B71258876BD00022011 /* Log.storyboard */; };
+		F4562B7625887B8C00022011 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4562B7525887B8C00022011 /* SignUpController.swift */; };
+		F4562B7825887BA700022011 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4562B7725887BA700022011 /* Login.swift */; };
 		F4633178258456CD001B352A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4633177258456CD001B352A /* AppDelegate.swift */; };
 		F463317A258456CD001B352A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4633179258456CD001B352A /* SceneDelegate.swift */; };
 		F463317C258456CD001B352A /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F463317B258456CD001B352A /* HomeVc.swift */; };
@@ -27,6 +30,9 @@
 		98A5756CA16D23A27E95197B /* Pods-Post.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.release.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.release.xcconfig"; sourceTree = "<group>"; };
 		A17037EA1D49917DBAFAF624 /* Pods-Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post.debug.xcconfig"; path = "Target Support Files/Pods-Post/Pods-Post.debug.xcconfig"; sourceTree = "<group>"; };
 		D0FD36E8AD700DAAEFFBC5F7 /* Pods_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4562B71258876BD00022011 /* Log.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
+		F4562B7525887B8C00022011 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		F4562B7725887BA700022011 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F4633174258456CD001B352A /* Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4633177258456CD001B352A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4633179258456CD001B352A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F402CDBA2586F80E00DE825C /* CellXib */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD05C72585B15D00A5268B /* customeCell.xib */,
+			);
+			path = CellXib;
+			sourceTree = "<group>";
+		};
+		F4562B702588769C00022011 /* loginStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				F4562B71258876BD00022011 /* Log.storyboard */,
+			);
+			path = loginStoryboard;
+			sourceTree = "<group>";
+		};
+		F4562B7325887B2300022011 /* PostsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F463317B258456CD001B352A /* HomeVc.swift */,
+				F463319025845855001B352A /* Createpost.swift */,
+			);
+			path = PostsViewController;
+			sourceTree = "<group>";
+		};
+		F4562B7425887B3D00022011 /* SignViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F4562B7525887B8C00022011 /* SignUpController.swift */,
+				F4562B7725887BA700022011 /* Login.swift */,
+			);
+			path = SignViewController;
+			sourceTree = "<group>";
+		};
 		F463316B258456CD001B352A = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +149,9 @@
 		F463318B2584572B001B352A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F4562B7425887B3D00022011 /* SignViewController */,
 				F4BD05BF2585978B00A5268B /* TableViewController */,
-				F463317B258456CD001B352A /* HomeVc.swift */,
-				F463319025845855001B352A /* Createpost.swift */,
+				F4562B7325887B2300022011 /* PostsViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F463317D258456CD001B352A /* Main.storyboard */,
+				F4562B702588769C00022011 /* loginStoryboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +179,7 @@
 			children = (
 				F4BD05C0258597D400A5268B /* TableView.swift */,
 				F4BD05C22585985800A5268B /* customeCell.swift */,
-				F4BD05C72585B15D00A5268B /* customeCell.xib */,
+				F402CDBA2586F80E00DE825C /* CellXib */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -164,6 +205,7 @@
 				F4633171258456CD001B352A /* Frameworks */,
 				F4633172258456CD001B352A /* Resources */,
 				5C7CC536A45D70C72C2AC936 /* [CP] Embed Pods Frameworks */,
+				903076A50B7ACB6470F45243 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +259,7 @@
 				F4633181258456DE001B352A /* Assets.xcassets in Resources */,
 				F463317F258456CD001B352A /* Main.storyboard in Resources */,
 				F4BD05C82585B15D00A5268B /* customeCell.xib in Resources */,
+				F4562B72258876BD00022011 /* Log.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +305,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Post/Pods-Post-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		903076A50B7ACB6470F45243 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Post/Pods-Post-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Post/Pods-Post-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Post/Pods-Post-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -270,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BD05C42585985900A5268B /* customeCell.swift in Sources */,
+				F4562B7825887BA700022011 /* Login.swift in Sources */,
 				F463317C258456CD001B352A /* HomeVc.swift in Sources */,
+				F4562B7625887B8C00022011 /* SignUpController.swift in Sources */,
 				F4BD05C1258597D400A5268B /* TableView.swift in Sources */,
 				F463319125845855001B352A /* Createpost.swift in Sources */,
 				F4633178258456CD001B352A /* AppDelegate.swift in Sources */,

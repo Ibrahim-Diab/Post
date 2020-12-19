@@ -8,7 +8,7 @@ target 'Post' do
   # Pods for Post
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-
-
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 end

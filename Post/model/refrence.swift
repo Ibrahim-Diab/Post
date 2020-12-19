@@ -9,11 +9,12 @@
 import Foundation
 
 
- let UserName :String = "username"
+let UserName :String = "username"
 let Category :String = "category"
 let Numlikes :String =  "numlikes"
 let Numcomment : String  = "numcomment"
 let PostText:String  = " posttxt"
 let Time:String  = "time"
 let Posts :String = "posts"
+let userref : String = "user"
 
